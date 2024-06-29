@@ -23,8 +23,8 @@ typedef union {
 
 #undef REG16
 
-} registers;
+} regs;
 
-static void ExecuteInstruction(u8 BytesRead, buffer *Buffer);
+void ExecuteInstruction(u8 BytesRead, buffer *Buffer);
 
 #endif

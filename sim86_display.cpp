@@ -1,19 +1,21 @@
+#include <stdio.h>
+
 #include "sim86_display.h"
 #include "sim86_table.h"
 
-static const char *GetMnemonic(operation_types Op)
+const char *GetMnemonic(operation_types Op)
 {
     const char *Result = OpMnemonic[Op];
     return Result;
 }
 
-static const char *GetRegister(register_id Reg)
+const char *GetRegister(register_id Reg)
 {
     const char *Result = Registers[Reg];
     return Result;
 }
 
-static void PrintInstruction(instruction Instruction)
+void PrintInstruction(instruction Instruction)
 {
     const char *Mnemonic = GetMnemonic(Instruction.OpType);
     printf("%s ", Mnemonic);
